@@ -33,20 +33,28 @@ function getLength(arr, cb) {
   cb(arr.length);
 }
 
+// getLength(items, console.log);
+
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
   cb(arr[arr.length - 1]);
 }
+
+// last(items, console.log);
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
   cb(x + y);
 }
 
+// sumNums(5, 7, console.log);
+
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
   cb(x * y);
 }
+
+// multiplyNums(3, 5, console.log);
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
@@ -60,6 +68,9 @@ function contains(item, list, cb) {
 
   cb(truth);
 }
+
+// contains('mud', items, console.log);
+// contains('Pencil', items, console.log);
 
 /* STRETCH PROBLEM */
 
@@ -81,3 +92,11 @@ function removeDuplicates(array, cb) {
   }
   cb(uniqueArray);
 }
+
+// removeDuplicates(items, console.log);
+
+//An IIFE
+
+let yeller = function () {
+  console.log('I am yelling here!')
+}();
