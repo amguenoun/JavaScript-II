@@ -107,8 +107,10 @@ const donationHundred = runners.reduce((acc, item) => {
 console.log(donationHundred);
 
 // Problem 3
-//Make an array that contains only the names of people with small and extra small shirt sizes
+//Make an array that contains only the names of people with small and extra small shirt sizes.
+//Then announce them to the world!
 
 const smallestShirts = runners.filter((item) => { return item.shirt_size === "S" || item.shirt_size === "XS"; });
 const smallestShirtsNames = smallestShirts.map((item) => `${item.first_name} ${item.last_name}`);
-console.log(smallestShirtsNames);
+// console.log(smallestShirtsNames);
+smallestShirtsNames.forEach((item) => console.log(item));
