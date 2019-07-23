@@ -3,7 +3,7 @@
 // with our items array.  Study both the problem and the solution to figure out the rest 
 // of the problems.
 
-const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
+const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum', 'Pencil'];
 
 /* 
 
@@ -67,6 +67,17 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
-
-
+  let uniqueArray = [];
+  for (let item of array) {
+    let duplicate = false;
+    for (let element of uniqueArray) {
+      if (item === element) {
+        duplicate = true;
+      }
+    }
+    if (!duplicate) {
+      uniqueArray.push(item);
+    }
+  }
+  cb(uniqueArray);
 }
